@@ -7,12 +7,13 @@ sliderPrev[0].onclick = slider_Prev;
 sliderNext[0].onclick = slider_Next;
 
 let sliderItem = document.getElementsByClassName("slider__item");
+let countItem = sliderItem.length - 1;
 
 function slider_Next() {
     let indexActiveElement = getIndexActiveElement();
     let activeElement = document.getElementsByClassName("slider__item_active")[0];
 
-    if (indexActiveElement === 4) {
+    if (indexActiveElement === (countItem)) {
         activeElement.classList.remove("slider__item_active");
         sliderItem[0].classList.add("slider__item_active"); 
     }
@@ -28,7 +29,7 @@ function slider_Prev() {
 
     if (indexActiveElement === 0) {
         activeElement.classList.remove("slider__item_active");
-        sliderItem[4].classList.add("slider__item_active"); 
+        sliderItem[countItem].classList.add("slider__item_active"); 
     }
     else {
         activeElement.classList.remove("slider__item_active");
