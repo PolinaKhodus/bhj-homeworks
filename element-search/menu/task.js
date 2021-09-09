@@ -13,10 +13,11 @@ function openLink(e) {
         e.preventDefault();
     }
 
-    let activeMenus = document.getElementsByClassName("menu_active");
-
-    for (let menu of activeMenus){
-        menu.classList.remove("menu_active");
+    if (menuSub.classList.contains('menu_active')=== true) {
+        menuSub.classList.remove("menu_active");
     }
-    menuSub.classList.add("menu_active"); 
+    else {
+        menuSub.classList.add("menu_active"); 
+    }
 }
+   
