@@ -4,7 +4,7 @@ let subscribeModal = document.getElementById("subscribe-modal");
 let modalClose = document.getElementsByClassName("modal__close"); 
 
 window.onload = () => {
-    if (document.cookie['modalClose'] !== true) {
+    if (document.cookie.includes('modalClose') !== true) {
         subscribeModal.classList.add("modal_active");
     }
 }
