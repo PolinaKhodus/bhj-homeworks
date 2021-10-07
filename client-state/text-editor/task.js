@@ -13,6 +13,6 @@ window.onload = () => {
 }
 
 button.addEventListener('click', () => {
-    localStorage.clear('value');
+    localStorage.removeItem('value');
     editor.value = "";
 })
